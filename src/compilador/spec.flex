@@ -20,7 +20,7 @@ branco = [\t\r\n ]+
 blocoComentario = "--[["~"]]--"
 linhaComentario = "--"
 palavraChave = "if" |"while" | "do"|"function"
-nomeFuncao = nomeVariavel+["("] 
+//nomeFuncao = nomeVariavel+["("] 
 concatenacao = ".."
 
 %%
