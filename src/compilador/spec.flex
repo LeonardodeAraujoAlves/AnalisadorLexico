@@ -13,12 +13,15 @@ import static compilador.Token.*;
 %type Token
 
 nomeVariavel = [_a-zA-Z][_a-zA-Z0-9]*
-inteiro = [0-9]+
 decimal = [0-9]+["."]+[0-9]+
+//tipoNumerico = [0-9]+["."]+[0-9]+
+
 branco = [\t\r\n ]+
-blocoComentario = "/*" ~"*/"
+blocoComentario = "--"
 linhaComentario = {branco}* "//" .*
-palavraChave = "if" | "class" | "int" | "while" | "do"
+palavraChave = "if" |"while" | "do"|"function"
+nomeFuncao = nomeVariavel+["("] 
+
 %%
 
 {palavraChave}          {imprimir ("PALAVRA-CHAVE",yytext()); return PALAVRA_CHAVE; }
