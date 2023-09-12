@@ -17,10 +17,11 @@ decimal = [0-9]+["."]+[0-9]+
 //tipoNumerico = [0-9]+["."]+[0-9]+
 
 branco = [\t\r\n ]+
-blocoComentario = "--"
-linhaComentario = {branco}* "//" .*
+blocoComentario = "--[["~"]]--"
+linhaComentario = "--"
 palavraChave = "if" |"while" | "do"|"function"
 nomeFuncao = nomeVariavel+["("] 
+concatenacao = ".."
 
 %%
 
