@@ -22,7 +22,7 @@ linhaComentario = "--"
 palavraChave = "if" |"while" | "do"|"function"
 //nomeFuncao = nomeVariavel+["("] 
 concatenacao = ".."
-terminador = "end"
+terminador = "end" | "break"
 
 %%
 
