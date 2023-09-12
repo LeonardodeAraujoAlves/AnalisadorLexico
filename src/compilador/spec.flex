@@ -32,5 +32,6 @@ concatenacao = ".."
 {blocoComentario}       {imprimir ("COMENTARIO(BLOCO)",yytext()); return COMENTARIO; }
 {linhaComentario}       {imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO; }
 {branco}                {return BRANCO; }
+{contatenacao}          {imprimir ("Concatenacao",yytext()); return CONCATENACAO}
 .                       {imprimir ("<<CARACTERE INVÁLIDO>>  ",yytext()); return ERROR; }
 <<EOF>>                 {return null;}
