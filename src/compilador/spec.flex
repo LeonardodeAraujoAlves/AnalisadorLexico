@@ -22,6 +22,7 @@ linhaComentario = "--"
 palavraChave = "if" |"while" | "do"|"function"
 //nomeFuncao = nomeVariavel+["("] 
 concatenacao = ".."
+terminador = "end"
 
 %%
 
@@ -33,5 +34,6 @@ concatenacao = ".."
 {linhaComentario}       {imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO; }
 {branco}                {return BRANCO; }
 {contatenacao}          {imprimir ("Concatenacao",yytext()); return CONCATENACAO}
+{terminador}            {imprimir("Terminador",yytext()); return TERMINADOR}
 .                       {imprimir ("<<CARACTERE INVÁLIDO>>  ",yytext()); return ERROR; }
 <<EOF>>                 {return null;}
