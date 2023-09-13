@@ -21,7 +21,7 @@ blocoComentario = "--[["~"]]--"
 linhaComentario = "--"
 palavraChave = "if" |"while" | "do"|"function"
 //nomeFuncao = nomeVariavel+["("]  falta implementar aqui
-concatenacao = ".."
+concatenacao = ".."//verificar porque identifica como CARACTERE invalido
 terminador = "end" | "break"
 
 %%

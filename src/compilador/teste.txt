@@ -1,12 +1,8 @@
-a = 5;
-int b;
-// teste de comnetado dasda e asfa
+a = 5
 
-/*
-comentario de blocos
-*/
+--
 
+--
 
-int d = a + c * 3 / 2;
+nome = "nomeTeste"
 
-2..4
