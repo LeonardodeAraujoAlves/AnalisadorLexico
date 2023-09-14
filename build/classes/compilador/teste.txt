@@ -1,8 +1,37 @@
-a = 5
+-- Declaração e atribuição de variáveis
+local nome = "João"
+local idade = 25
 
+-- Tipos de dados básicos
+local numeroInteiro = 10
+local numeroDecimal = 3.14
+local texto = "Olá, mundo!"
+local booleano = true
 
-cs = 1.6
+-- Estruturas condicionais
+if idade >= 18 then
+    print("Você é maior de idade.")
+else
+    print("Você é menor de idade.")
+end
 
-while
+-- Estruturas de repetição
+for i = 1, 5 do
+    print(i)
+end
 
---
+-- Funções
+function soma(a, b)
+    return a + b
+end
+
+local resultado = soma(2, 3)
+print("Resultado da soma:", resultado)
+
+-- Comentários
+-- Este é um comentário de linha
+
+--[[ 
+    Este é um comentário
+    de bloco
+--]]
