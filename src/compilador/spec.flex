@@ -21,8 +21,8 @@ blocoComentario = "--[["~"]]--"
 linhaComentario = "'-''-'"
 atribuicao = "="
 palavraChave = "if" |"while" | "do"|"function"
-//nomeFuncao = nomeVariavel+["("]  falta implementar aqui
-
+lista = "[" [^\[\]]* "]" 
+vetor = "{" [^{}]* "}" 
 terminador = "end" | "break"
 
 %%
@@ -31,10 +31,12 @@ terminador = "end" | "break"
 {nomeVariavel}          {imprimir ("NOME_VARIAVEL",yytext()); return NOME_VARIAVEL; }
 {string}                {imprimir("Cadeia de caracteres",yytext()); return STRING;}
 {est_condicional}       {imprimir("Estrutura condicional",yytext()); return EST_COND;}
-{tipoNumerico}               {imprimir ("TIPO NUMERICO",yytext()); return NUMBER; }
+{tipoNumerico}          {imprimir ("TIPO NUMERICO",yytext()); return NUMBER; }
 {blocoComentario}       {imprimir ("COMENTARIO(BLOCO)",yytext()); return COMENTARIO; }
 {linhaComentario}       {imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO; }
 {branco}                {return BRANCO; }
 {terminador}            {imprimir("Terminador",yytext()); return TERMINADOR;}
+{lista}                 {imprimir("Tipo: Lista",yytext()); return LISTA;}
+{vetor}                 {imprimir("Tipo: Vetor",yytext()); return VETOR;}
 .                       {imprimir ("<<CARACTERE INVÁLIDO>>  ",yytext()); return ERROR; }
 <<EOF>>                 {return null;}
