@@ -1,12 +1,7 @@
-a = 5;
-int b;
-// teste de comnetado dasda e asfa
+a = 5
 
-/*
-comentario de blocos
-*/
+cs = 1.6
 
+while
 
-int d = a + c * 3 / 2;
-
-2..4
+--

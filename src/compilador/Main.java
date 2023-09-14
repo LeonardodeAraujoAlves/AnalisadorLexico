@@ -17,8 +17,13 @@ import jflex.exceptions.SilentExit;
  */
 public class Main {
     
-    public static void main(String[] args) throws FileNotFoundException, IOException{
-        Lexer analisador = new Lexer(new BufferedReader(new FileReader("src\\compilador\\teste.txt")));
+    public static void main(String[] args) throws FileNotFoundException, IOException, SilentExit{
+        /*
+        String[]arg = new String[1];
+        arg[0] = "src\\compilador\\spec.flex";
+        jflex.Main.generate(arg);
+        */
+        LuaLexer analisador = new LuaLexer(new BufferedReader(new FileReader("src\\compilador\\teste.txt")));
         while (true) {            
             Token token = analisador.yylex();
             if(token == null) break;

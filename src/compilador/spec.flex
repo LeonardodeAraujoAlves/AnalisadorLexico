@@ -9,31 +9,28 @@ import static compilador.Token.*;
     }
 %}
 
-%class Lexer
+%class LuaLexer
 %type Token
 
+tipoNumerico = [0-9]+(\.[0-9]+)?
 nomeVariavel = [_a-zA-Z][_a-zA-Z0-9]*
-decimal = [0-9]+["."]+[0-9]+
-//tipoNumerico = [0-9]+["."]+[0-9]+
-
 branco = [\t\r\n ]+
 blocoComentario = "--[["~"]]--"
-linhaComentario = "--"
+linhaComentario = "'-''-'"
+atribuicao = "="
 palavraChave = "if" |"while" | "do"|"function"
 //nomeFuncao = nomeVariavel+["("]  falta implementar aqui
-concatenacao = ".."
+
 terminador = "end" | "break"
 
 %%
-
+= { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO; }
 {palavraChave}          {imprimir ("PALAVRA-CHAVE",yytext()); return PALAVRA_CHAVE; }
 {nomeVariavel}          {imprimir ("NOME_VARIAVEL",yytext()); return NOME_VARIAVEL; }
-{inteiro}               {imprimir ("NUMERO INTEIRO",yytext()); return INT; }
-{decimal}               {imprimir ("NUMERO DECIMAL",yytext()); return DEC; }
+{tipoNumerico}               {imprimir ("TIPO NUMERICO",yytext()); return NUMBER; }
 {blocoComentario}       {imprimir ("COMENTARIO(BLOCO)",yytext()); return COMENTARIO; }
 {linhaComentario}       {imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO; }
 {branco}                {return BRANCO; }
-{contatenacao}          {imprimir ("Concatenacao",yytext()); return CONCATENACAO}
-{terminador}            {imprimir("Terminador",yytext()); return TERMINADOR}
+{terminador}            {imprimir("Terminador",yytext()); return TERMINADOR;}
 .                       {imprimir ("<<CARACTERE INVÁLIDO>>  ",yytext()); return ERROR; }
 <<EOF>>                 {return null;}
