@@ -14,7 +14,9 @@ import static compilador.Token.*;
 
 tipoNumerico = [0-9]+(\.[0-9]+)?
 nomeVariavel = [_a-zA-Z][_a-zA-Z0-9]*
+string =  \"[^\"\n]*\" 
 branco = [\t\r\n ]+
+est_condicional = "if"|"then"|"else"|"elseif"
 blocoComentario = "--[["~"]]--"
 linhaComentario = "'-''-'"
 atribuicao = "="
@@ -27,6 +29,8 @@ terminador = "end" | "break"
 = { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO; }
 {palavraChave}          {imprimir ("PALAVRA-CHAVE",yytext()); return PALAVRA_CHAVE; }
 {nomeVariavel}          {imprimir ("NOME_VARIAVEL",yytext()); return NOME_VARIAVEL; }
+{string}                {imprimir("Cadeia de caracteres",yytext()); return STRING;}
+{est_condicional}       {imprimir("Estrutura condicional",yytext()); return EST_COND;}
 {tipoNumerico}               {imprimir ("TIPO NUMERICO",yytext()); return NUMBER; }
 {blocoComentario}       {imprimir ("COMENTARIO(BLOCO)",yytext()); return COMENTARIO; }
 {linhaComentario}       {imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO; }
