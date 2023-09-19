@@ -24,6 +24,7 @@ atribuicao = "="
 est_repeticao = "while" | "do"
 lista = "[" [^\[\]]* "]" 
 vetor = "{" [^{}]* "}" 
+terminador = "end" | "break"
 
 %%
 = { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO; }
