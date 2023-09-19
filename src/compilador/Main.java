@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package compilador;
 
 import java.io.BufferedReader;
@@ -13,7 +8,7 @@ import jflex.exceptions.SilentExit;
 
 /**
  *
- * @author Frog33
+ * @author Leonardo de Araujo Alves
  */
 public class Main {
     
@@ -23,10 +18,12 @@ public class Main {
         arg[0] = "src\\compilador\\spec.flex";
         jflex.Main.generate(arg);
         */
+        
         LuaLexer analisador = new LuaLexer(new BufferedReader(new FileReader("src\\compilador\\teste.txt")));
         while (true) {            
             Token token = analisador.yylex();
             if(token == null) break;
         }
+        
     }
 }

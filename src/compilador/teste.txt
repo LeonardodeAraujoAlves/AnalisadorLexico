@@ -1,12 +1,12 @@
 -- Declaração e atribuição de variáveis
-local nome = "João"
-local idade = 25
+ nome = "João"
+ idade = 25
 
 -- Tipos de dados básicos
-local numeroInteiro = 10
-local numeroDecimal = 3.14
-local texto = "Olá, mundo!"
-local booleano = true
+ numeroInteiro = 10
+ numeroDecimal = 3.14
+ texto = "Olá, mundo!"
+ booleano = true
 
 -- Estruturas condicionais
 if idade >= 18 then
@@ -25,7 +25,7 @@ function soma(a, b)
     return a + b
 end
 
-local resultado = soma(2, 3)
+ resultado = soma(2, 3)
 print("Resultado da soma:", resultado)
 
 -- Comentários

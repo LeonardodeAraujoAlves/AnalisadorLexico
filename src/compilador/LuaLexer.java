@@ -62,12 +62,12 @@ class LuaLexer {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\11\0\2\1\2\2\1\1\22\0\1\1\6\0\1\3"+
-    "\5\0\1\4\1\5\1\0\12\6\3\0\1\7\3\0"+
-    "\32\10\1\11\1\0\1\12\1\0\1\10\1\0\2\10"+
-    "\1\13\1\14\1\15\1\16\1\10\1\17\1\20\2\10"+
-    "\1\21\1\10\1\22\1\23\4\10\1\24\1\25\1\10"+
-    "\1\26\3\10\12\0\1\2\u01a2\0\2\2\326\0\u0100\2";
+    "\11\0\1\1\1\2\2\3\1\1\22\0\1\1\1\0"+
+    "\1\4\4\0\1\5\5\0\1\6\1\7\1\0\12\10"+
+    "\3\0\1\11\3\0\32\12\1\13\1\0\1\14\1\0"+
+    "\1\12\1\0\3\12\1\15\1\16\2\12\1\17\1\20"+
+    "\2\12\1\21\2\12\1\22\7\12\1\23\3\12\1\24"+
+    "\1\0\1\25\7\0\1\3\u01a2\0\2\3\326\0\u0100\3";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -94,12 +94,13 @@ class LuaLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\2\1\1\3\1\4\5\5\3\0"+
-    "\1\6\2\5\2\0\1\3\2\5\2\0\2\5\2\0"+
-    "\1\5\1\7\1\0\1\5\1\0\1\5\1\10";
+    "\1\0\1\1\1\2\3\1\1\3\1\4\1\5\1\1"+
+    "\2\5\1\1\1\0\1\6\4\0\1\7\1\10\1\5"+
+    "\1\0\1\11\2\0\1\3\1\5\2\0\1\5\2\0"+
+    "\1\12\2\0\1\13";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[36];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -124,14 +125,14 @@ class LuaLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\27\0\56\0\105\0\134\0\163\0\27\0\212"+
-    "\0\241\0\270\0\317\0\346\0\375\0\u0114\0\u012b\0\212"+
-    "\0\u0142\0\u0159\0\u0170\0\u0187\0\u012b\0\u019e\0\u01b5\0\u01cc"+
-    "\0\u01e3\0\u01fa\0\u0211\0\u0228\0\u023f\0\u0256\0\27\0\u026d"+
-    "\0\u0284\0\u029b\0\u02b2\0\27";
+    "\0\0\0\26\0\54\0\102\0\130\0\156\0\204\0\26"+
+    "\0\232\0\260\0\306\0\334\0\362\0\102\0\26\0\u0108"+
+    "\0\u011e\0\u0134\0\260\0\26\0\232\0\u014a\0\362\0\26"+
+    "\0\u0160\0\u0176\0\u0134\0\u018c\0\u01a2\0\u01b8\0\u01ce\0\u01e4"+
+    "\0\u01fa\0\26\0\u0210\0\u0226\0\26";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[36];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -154,30 +155,24 @@ class LuaLexer {
   private static final int [] ZZ_TRANS = zzUnpacktrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\0\1\4\1\5\1\2\1\6\1\7"+
-    "\1\10\2\2\1\10\1\11\1\10\1\12\1\10\1\13"+
-    "\5\10\1\14\30\0\1\3\31\0\1\15\26\0\1\16"+
-    "\27\0\1\17\1\6\26\0\1\10\1\0\1\10\2\0"+
-    "\14\10\6\0\1\10\1\0\1\10\2\0\10\10\1\20"+
-    "\3\10\6\0\1\10\1\0\1\10\2\0\12\10\1\21"+
-    "\1\10\6\0\1\10\1\0\1\10\2\0\3\10\1\20"+
-    "\10\10\6\0\1\10\1\0\1\10\2\0\4\10\1\22"+
-    "\7\10\3\0\1\23\34\0\1\24\23\0\1\25\26\0"+
-    "\1\10\1\0\1\10\2\0\7\10\1\26\4\10\6\0"+
-    "\1\10\1\0\1\10\2\0\5\10\1\27\6\10\3\0"+
-    "\1\30\34\0\1\31\23\0\1\10\1\0\1\10\2\0"+
-    "\1\32\13\10\6\0\1\10\1\0\1\10\2\0\6\10"+
-    "\1\33\5\10\4\0\1\34\22\0\12\31\1\35\14\31"+
-    "\6\0\1\10\1\0\1\10\2\0\11\10\1\36\2\10"+
-    "\6\0\1\10\1\0\1\10\2\0\2\10\1\20\11\10"+
-    "\3\0\1\37\23\0\12\31\1\40\14\31\6\0\1\10"+
-    "\1\0\1\10\2\0\5\10\1\41\6\10\4\31\1\42"+
-    "\5\31\1\40\14\31\6\0\1\10\1\0\1\10\2\0"+
-    "\10\10\1\43\3\10\4\31\1\44\5\31\1\35\14\31"+
-    "\6\0\1\10\1\0\1\10\2\0\7\10\1\20\4\10";
+    "\1\2\2\3\1\0\1\4\1\5\1\6\1\2\1\7"+
+    "\1\10\1\11\1\12\1\2\1\13\5\11\1\14\1\15"+
+    "\1\2\27\0\2\3\23\0\2\16\1\0\1\16\1\17"+
+    "\21\16\6\0\1\20\25\0\1\21\26\0\1\22\1\7"+
+    "\25\0\1\11\1\0\1\11\2\0\7\11\2\0\13\23"+
+    "\1\0\1\24\11\23\10\0\1\11\1\0\1\11\2\0"+
+    "\5\11\1\25\1\11\12\0\1\11\1\0\1\11\2\0"+
+    "\2\11\1\26\4\11\2\0\24\27\1\0\1\30\5\0"+
+    "\1\31\33\0\1\32\22\0\1\33\25\0\1\11\1\0"+
+    "\1\11\2\0\3\11\1\34\3\11\7\0\1\35\33\0"+
+    "\1\36\22\0\1\11\1\0\1\11\2\0\4\11\1\37"+
+    "\2\11\10\0\1\40\17\0\14\36\1\41\11\36\10\0"+
+    "\1\11\1\0\1\11\2\0\1\11\1\25\5\11\7\0"+
+    "\1\42\20\0\14\36\1\43\17\36\1\44\5\36\1\43"+
+    "\17\36\1\45\5\36\1\41\11\36";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[713];
+    int [] result = new int[572];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -220,12 +215,12 @@ class LuaLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\4\1\1\11\5\1\3\0\3\1\2\0"+
-    "\3\1\2\0\2\1\2\0\1\1\1\11\1\0\1\1"+
-    "\1\0\1\1\1\11";
+    "\1\0\1\11\5\1\1\11\5\1\1\0\1\11\4\0"+
+    "\1\11\2\1\1\0\1\11\2\0\2\1\2\0\1\1"+
+    "\2\0\1\11\2\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[36];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -669,42 +664,57 @@ class LuaLexer {
             { imprimir ("<<CARACTERE INVÁLIDO>>  ",yytext()); return ERROR;
             }
           // fall through
-          case 9: break;
+          case 12: break;
           case 2:
             { return BRANCO;
             }
           // fall through
-          case 10: break;
+          case 13: break;
           case 3:
             { imprimir ("TIPO NUMERICO",yytext()); return NUMBER;
             }
           // fall through
-          case 11: break;
+          case 14: break;
           case 4:
             { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO;
             }
           // fall through
-          case 12: break;
+          case 15: break;
           case 5:
             { imprimir ("NOME_VARIAVEL",yytext()); return NOME_VARIAVEL;
             }
           // fall through
-          case 13: break;
+          case 16: break;
           case 6:
-            { imprimir ("PALAVRA-CHAVE",yytext()); return PALAVRA_CHAVE;
+            { imprimir("Cadeia de caracteres",yytext()); return STRING;
             }
           // fall through
-          case 14: break;
+          case 17: break;
           case 7:
+            { imprimir("Tipo: Lista",yytext()); return LISTA;
+            }
+          // fall through
+          case 18: break;
+          case 8:
+            { imprimir ("Estrutura de repetição ",yytext()); return EST_REPET;
+            }
+          // fall through
+          case 19: break;
+          case 9:
+            { imprimir("Tipo: Vetor",yytext()); return VETOR;
+            }
+          // fall through
+          case 20: break;
+          case 10:
             { imprimir ("COMENTARIO(LINHA)",yytext()); return COMENTARIO;
             }
           // fall through
-          case 15: break;
-          case 8:
+          case 21: break;
+          case 11:
             { imprimir ("COMENTARIO(BLOCO)",yytext()); return COMENTARIO;
             }
           // fall through
-          case 16: break;
+          case 22: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
