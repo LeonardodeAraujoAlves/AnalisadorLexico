@@ -16,7 +16,7 @@ tipoNumerico = [0-9]+(\.[0-9]+)?
 nomeVariavel = [_a-zA-Z][_a-zA-Z0-9]*
 string =  \"[^\"\n]*\" 
 branco = [\t\r\n ]+
-est_condicional = "if"|"then"|"else"|"elseif"
+est_condicional = "if " | "then " | "else\n" | "elseif "
 blocoComentario = "--\[(=*)\[(.|\n)*?\]\1\]"
 linhaComentario = "--".*
 atribuicao = "="
