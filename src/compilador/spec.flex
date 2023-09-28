@@ -19,13 +19,13 @@ string =  \"[^\"\n]*\"
 branco = [\t\r\n ]+
 est_condicional = "if"|"then"|"else"|"elseif"
 blocoComentario = "--[["~"]]--"
-linhaComentario = "'-''-'"
+linhaComentario = "--".*
 atribuicao = "="
-est_repeticao = "while" | "do"
+est_repeticao = "while" | "do" | "for\n"
 lista = "[" [^\[\]]* "]" 
 vetor = "{" [^{}]* "}" 
-terminador = "end" | "break"
-
+terminador = "end\n" | "break\n"
+funcao = "function\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*\\([^\\)]*\\)\\s*\\{[^\\}]*\\}" 
 %%
 = { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO; }
 {est_repeticao}          {imprimir ("Estrutura de repetição ",yytext()); return EST_REPET; }
