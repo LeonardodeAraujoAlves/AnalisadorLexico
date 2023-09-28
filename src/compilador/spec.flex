@@ -25,7 +25,7 @@ est_repeticao = "while" | "do" | "for\n"
 lista = "[" [^\[\]]* "]" 
 vetor = "{" [^{}]* "}" 
 terminador = "end\n" | "break\n"
-funcao = "function\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*\\([^\\)]*\\)\\s*\\{[^\\}]*\\}" 
+funcao = "function" 
 %%
 = { imprimir("Operador de Atribuição", yytext()); return ATRIBUICAO; }
 {est_repeticao}          {imprimir ("Estrutura de repetição ",yytext()); return EST_REPET; }
